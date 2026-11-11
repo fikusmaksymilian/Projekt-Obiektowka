@@ -45,3 +45,11 @@ string Zgloszenie::getStatus() const {
 vector<WpisHistorii> Zgloszenie::getHistoria() const {
     return historia;
 }
+
+void Zgloszenie::dodajKomentarz(Komentarz k) {
+    komentarze.push_back(k);
+}
+
+vector<Komentarz> Zgloszenie::getKomentarze() const {
+    return komentarze;
+}
