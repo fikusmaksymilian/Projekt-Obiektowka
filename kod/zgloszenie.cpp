@@ -53,3 +53,11 @@ void Zgloszenie::dodajKomentarz(Komentarz k) {
 vector<Komentarz> Zgloszenie::getKomentarze() const {
     return komentarze;
 }
+
+string Zgloszenie::getTermin() const {
+    return termin;
+}
+
+Technik* Zgloszenie::getTechnik() const {
+    return technik;
+}

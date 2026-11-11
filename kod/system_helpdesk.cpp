@@ -31,3 +31,13 @@ Zgloszenie* SystemHelpdesk::znajdzZgloszenie(int id) const {
     }
     return nullptr;
 }
+
+vector<Zgloszenie*> SystemHelpdesk::filtrujZgloszenia(Technik* technik, string status) const {
+    vector<Zgloszenie*> wynik;
+    for (const auto& z : listaZgloszen) {
+        if (z->getTechnik() == technik && z->getStatus() == status) {
+            wynik.push_back(z.get());
+        }
+    }
+    return wynik;
+}

@@ -20,3 +20,7 @@ bool Administrator::przydzielZgloszenie(Zgloszenie& zgloszenie, Technik& technik
     technik.dodajZgloszenie(&zgloszenie);
     return true;
 }
+
+string Administrator::sprawdzDeadline(const Zgloszenie& zgloszenie) const {
+    return zgloszenie.getTermin();
+}

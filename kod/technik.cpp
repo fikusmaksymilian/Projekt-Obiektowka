@@ -21,3 +21,11 @@ void Technik::obetnijPremie() {
         premia = 0;
     }
 }
+
+double Technik::getPremia() const {
+    return premia;
+}
+
+vector<Zgloszenie*> Technik::getZgloszenia() const {
+    return zgloszenia;
+}
