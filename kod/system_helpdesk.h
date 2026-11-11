@@ -22,5 +22,6 @@ public:
     Technik* dodajTechnika(string imie, string nazwisko, string specjalizacja, double premia);
     Zgloszenie* utworzZgloszenie(string opis, int priorytet, KategoriaProblemu kategoria, string termin, Zglaszajacy* autor);
     Zgloszenie* znajdzZgloszenie(int id) const;
+    bool zmienStatusZgloszenia(int idZgloszenia, string nowyStatus, string data);
     vector<Zgloszenie*> filtrujZgloszenia(Technik* technik, string status) const;
 };

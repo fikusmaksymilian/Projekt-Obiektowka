@@ -112,7 +112,7 @@ int main() {
             }
             cout << "Data (RRRR-MM-DD): ";
             cin >> data;
-            if (z->zmienStatus(statusy[s], z->getTechnik(), data)) {
+            if (system.zmienStatusZgloszenia(id, statusy[s], data)) {
                 cout << "Status zmieniony na " << z->getStatus() << "\n";
             } else {
                 cout << "Niedozwolona zmiana statusu\n";

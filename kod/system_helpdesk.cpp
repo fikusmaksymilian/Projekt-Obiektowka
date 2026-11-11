@@ -41,3 +41,11 @@ vector<Zgloszenie*> SystemHelpdesk::filtrujZgloszenia(Technik* technik, string s
     }
     return wynik;
 }
+
+bool SystemHelpdesk::zmienStatusZgloszenia(int idZgloszenia, string nowyStatus, string data) {
+    Zgloszenie* z = znajdzZgloszenie(idZgloszenia);
+    if (z == nullptr) {
+        return false;
+    }
+    return z->zmienStatus(nowyStatus, z->getTechnik(), data);
+}
